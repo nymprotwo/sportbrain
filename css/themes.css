@@ -1,0 +1,168 @@
+:root {
+  /* ── Design tokens: Gold (default) ── */
+  /* GREEN backup: #1DB954 / gradient #149B48→#0B6229 / rgba(29,185,84) */
+  --accent-primary:   #C9A84C;
+  --accent-secondary: #7D6420;
+  --bg-primary:       #0B0B0B;
+  --bg-card:          #111111;
+  --text-primary:     #FFFFFF;
+  --text-secondary:   #A1A1A1;
+  --border-subtle:    #1F1F1F;
+  --border-light:     #2A2A2A;
+  --gradient-primary: linear-gradient(180deg, #C9A84C 0%, #7D6420 100%);
+  --btn-main-color:   #1a1205;
+  --ac-glow:          rgba(201,168,76,.2);
+  --color-success:    #4ADE80;
+  --color-error:      #EF4444;
+
+  /* ── Mapped to existing vars (обратная совместимость) ── */
+  --bg:  var(--bg-primary);
+  --sf:  var(--bg-card);
+  --s2:  #161616;
+  --br:  var(--border-subtle);
+  --br2: var(--border-light);
+
+  --ac:  var(--accent-primary);
+  --ad:  rgba(201,168,76,.07);
+  --ab:  rgba(201,168,76,.18);
+
+  /* accent opacity tokens */
+  --ac04: rgba(201,168,76,.03); --ac05: rgba(201,168,76,.04);
+  --ac06: rgba(201,168,76,.05); --ac07: rgba(201,168,76,.05);
+  --ac08: rgba(201,168,76,.06); --ac10: rgba(201,168,76,.07);
+  --ac12: rgba(201,168,76,.08); --ac14: rgba(201,168,76,.09);
+  --ac15: rgba(201,168,76,.1);  --ac18: rgba(201,168,76,.12);
+  --ac20: rgba(201,168,76,.13); --ac25: rgba(201,168,76,.16);
+  --ac28: rgba(201,168,76,.18); --ac30: rgba(201,168,76,.2);
+  --ac40: rgba(201,168,76,.26); --ac45: rgba(201,168,76,.3);
+  --ac50: rgba(201,168,76,.33); --ac55: rgba(201,168,76,.37);
+  --ac60: rgba(201,168,76,.4);  --ac70: rgba(201,168,76,.47);
+
+  /* 1ПМ block tokens */
+  --orm-bg:      rgba(201,168,76,.07);
+  --orm-border:  rgba(201,168,76,.4);
+  --orm-glow:    rgba(201,168,76,.12);
+  --orm-icon-bg: rgba(201,168,76,.12);
+  --orm-icon-bd: rgba(201,168,76,.3);
+  --orm-color:   #C9A84C;
+  --orm-label:   rgba(201,168,76,.7);
+
+  --or:  #b85c38;
+  --pu:  #7c5cbf;
+  --re:  var(--color-error);
+  --am:  #D0D0D0;
+  --bl:  #5a9ae0;
+
+  --tx:  #C4C5C8;
+  --tx2: var(--text-primary);
+  --sb:  var(--text-secondary);
+  --mt:  #555659;
+}
+
+/* ── Green Brutal theme ── */
+[data-theme="green"] {
+  --accent-primary:   #1DB954;
+  --accent-secondary: #127336;
+  --gradient-primary: linear-gradient(180deg, #149B48 0%, #0B6229 100%);
+  --btn-main-color:   #041509;
+  --ac-glow:          rgba(29,185,84,.2);
+
+  --ac:  #1DB954;
+  --ad:  rgba(29,185,84,.07);
+  --ab:  rgba(29,185,84,.18);
+
+  --ac04: rgba(29,185,84,.03); --ac05: rgba(29,185,84,.04);
+  --ac06: rgba(29,185,84,.05); --ac07: rgba(29,185,84,.05);
+  --ac08: rgba(29,185,84,.06); --ac10: rgba(29,185,84,.07);
+  --ac12: rgba(29,185,84,.08); --ac14: rgba(29,185,84,.09);
+  --ac15: rgba(29,185,84,.1);  --ac18: rgba(29,185,84,.12);
+  --ac20: rgba(29,185,84,.13); --ac25: rgba(29,185,84,.16);
+  --ac28: rgba(29,185,84,.18); --ac30: rgba(29,185,84,.2);
+  --ac40: rgba(29,185,84,.26); --ac45: rgba(29,185,84,.3);
+  --ac50: rgba(29,185,84,.33); --ac55: rgba(29,185,84,.37);
+  --ac60: rgba(29,185,84,.4);  --ac70: rgba(29,185,84,.47);
+
+  --orm-bg:      rgba(29,185,84,.07);
+  --orm-border:  rgba(29,185,84,.4);
+  --orm-glow:    rgba(29,185,84,.12);
+  --orm-icon-bg: rgba(29,185,84,.12);
+  --orm-icon-bd: rgba(29,185,84,.3);
+  --orm-color:   #1DB954;
+  --orm-label:   rgba(29,185,84,.7);
+}
+
+/* ── Premium White theme ── */
+[data-theme="premium"] {
+  --accent-primary:   #F2F2F2;
+  --accent-secondary: #EAEAEA;
+  --gradient-primary: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 100%);
+  --btn-main-color:   #0A0A0A;
+  --ac-glow:          rgba(242,242,242,.2);
+
+  --ac:  #F2F2F2;
+  --ad:  rgba(242,242,242,.07);
+  --ab:  rgba(242,242,242,.18);
+  --am:  #D0D0D0;
+
+  --ac04: rgba(242,242,242,.03); --ac05: rgba(242,242,242,.04);
+  --ac06: rgba(242,242,242,.05); --ac07: rgba(242,242,242,.05);
+  --ac08: rgba(242,242,242,.06); --ac10: rgba(242,242,242,.07);
+  --ac12: rgba(242,242,242,.08); --ac14: rgba(242,242,242,.09);
+  --ac15: rgba(242,242,242,.1);  --ac18: rgba(242,242,242,.12);
+  --ac20: rgba(242,242,242,.13); --ac25: rgba(242,242,242,.16);
+  --ac28: rgba(242,242,242,.18); --ac30: rgba(242,242,242,.2);
+  --ac40: rgba(242,242,242,.26); --ac45: rgba(242,242,242,.3);
+  --ac50: rgba(242,242,242,.33); --ac55: rgba(242,242,242,.37);
+  --ac60: rgba(242,242,242,.4);  --ac70: rgba(242,242,242,.47);
+
+  --orm-bg:      rgba(242,242,242,.05);
+  --orm-border:  rgba(242,242,242,.25);
+  --orm-glow:    rgba(242,242,242,.08);
+  --orm-icon-bg: rgba(242,242,242,.08);
+  --orm-icon-bd: rgba(242,242,242,.2);
+  --orm-color:   #F2F2F2;
+  --orm-label:   rgba(242,242,242,.6);
+}
+
+/* ── Orange classic theme ── */
+[data-theme="orange"] {
+  --accent-primary:   #d4a843;
+  --accent-secondary: #a07830;
+  --bg-primary:       #111213;
+  --bg-card:          #18191b;
+  --text-primary:     #F0F1F4;
+  --text-secondary:   #A0A2A8;
+  --border-subtle:    #2a2b2e;
+  --border-light:     #333539;
+  --gradient-primary: linear-gradient(135deg, #d4a843 0%, #a07830 100%);
+  --btn-main-color:   #1a1410;
+  --ac-glow:          rgba(212,168,67,.26);
+  --color-error:      #c0392b;
+
+  --ac:  #d4a843;
+  --s2:  #1e1f22;
+  --ad:  rgba(212,168,67,.07);
+  --ab:  rgba(212,168,67,.18);
+  --am:  #c49a2a;
+  --mt:  #787A82;
+  --tx:  #D8D9DC;
+
+  --ac04: rgba(212,168,67,.03); --ac05: rgba(212,168,67,.04);
+  --ac06: rgba(212,168,67,.05); --ac07: rgba(212,168,67,.05);
+  --ac08: rgba(212,168,67,.06); --ac10: rgba(212,168,67,.07);
+  --ac12: rgba(212,168,67,.08); --ac14: rgba(212,168,67,.09);
+  --ac15: rgba(212,168,67,.1);  --ac18: rgba(212,168,67,.12);
+  --ac20: rgba(212,168,67,.13); --ac25: rgba(212,168,67,.16);
+  --ac28: rgba(212,168,67,.18); --ac30: rgba(212,168,67,.2);
+  --ac40: rgba(212,168,67,.26); --ac45: rgba(212,168,67,.3);
+  --ac50: rgba(212,168,67,.33); --ac55: rgba(212,168,67,.37);
+  --ac60: rgba(212,168,67,.4);  --ac70: rgba(212,168,67,.47);
+
+  --orm-bg:      rgba(180,40,40,.07);
+  --orm-border:  rgba(200,60,60,.4);
+  --orm-glow:    rgba(200,50,50,.12);
+  --orm-icon-bg: rgba(200,60,60,.12);
+  --orm-icon-bd: rgba(200,60,60,.3);
+  --orm-color:   #f07070;
+  --orm-label:   rgba(220,80,80,.7);
+}
