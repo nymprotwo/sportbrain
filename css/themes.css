@@ -1,0 +1,252 @@
+/* ════════════════════════════════════════════
+   NYM Training · Theme System
+   3 background atmospheres × N accent colours
+   ════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────
+   ROOT: Dark (cold / blue-tinted)
+   ────────────────────────────────────────── */
+:root {
+  /* ── Accent: Gold (default) ── */
+  --accent-primary:   #C9A84C;
+  --accent-secondary: #7D6420;
+  --gradient-primary: linear-gradient(180deg, #C9A84C 0%, #7D6420 100%);
+  --btn-main-color:   #1a1205;
+  --ac-glow:          rgba(201,168,76,.2);
+  --color-success:    #4ADE80;
+  --color-error:      #EF4444;
+
+  /* ── Background layer (cold) ── */
+  --bg-primary:    #0a0b0e;   /* near-black, cold breath */
+  --bg-card:       #111318;   /* card surface, cold tint */
+  --bg:  var(--bg-primary);
+  --sf:  var(--bg-card);
+  --s2:  #141820;             /* secondary surface */
+
+  /* ── Text (cold) ── */
+  --text-primary:  #e8ecf2;   /* cold bright heading */
+  --text-secondary:#7888a0;   /* cold blue-grey secondary */
+  --tx:  #bbc4d0;             /* body text, cold grey-blue */
+  --tx2: var(--text-primary);
+  --sb:  var(--text-secondary);
+
+  /* ── Borders (cold) ── */
+  --border-subtle: #1c2030;   /* cold dark border */
+  --border-light:  #252d40;   /* slightly lighter cold border */
+  --br:  var(--border-subtle);
+  --br2: var(--border-light);
+
+  /* ── Passive / secondary UI colour ── */
+  /* Used for: inactive nav icons, dividers, muted states */
+  --mt:  #4a5878;             /* cold blue-grey — passive UI */
+
+  /* ── Nav ── */
+  --nav-bg: rgba(9,10,14,.99);
+  --nav-border: #1c2030;
+
+  /* ── Accent opacity tokens ── */
+  --ac:  var(--accent-primary);
+  --ad:  rgba(201,168,76,.07);
+  --ab:  rgba(201,168,76,.18);
+  --ac04: rgba(201,168,76,.03); --ac05: rgba(201,168,76,.04);
+  --ac06: rgba(201,168,76,.05); --ac07: rgba(201,168,76,.05);
+  --ac08: rgba(201,168,76,.06); --ac10: rgba(201,168,76,.07);
+  --ac12: rgba(201,168,76,.08); --ac14: rgba(201,168,76,.09);
+  --ac15: rgba(201,168,76,.1);  --ac18: rgba(201,168,76,.12);
+  --ac20: rgba(201,168,76,.13); --ac25: rgba(201,168,76,.16);
+  --ac28: rgba(201,168,76,.18); --ac30: rgba(201,168,76,.2);
+  --ac40: rgba(201,168,76,.26); --ac45: rgba(201,168,76,.3);
+  --ac50: rgba(201,168,76,.33); --ac55: rgba(201,168,76,.37);
+  --ac60: rgba(201,168,76,.4);  --ac70: rgba(201,168,76,.47);
+
+  /* ── 1RM block ── */
+  --orm-bg:      rgba(201,168,76,.07);
+  --orm-border:  rgba(201,168,76,.4);
+  --orm-glow:    rgba(201,168,76,.12);
+  --orm-icon-bg: rgba(201,168,76,.12);
+  --orm-icon-bd: rgba(201,168,76,.3);
+  --orm-color:   #C9A84C;
+  --orm-label:   rgba(201,168,76,.7);
+
+  --or:  #b85c38;
+  --pu:  #7c5cbf;
+  --re:  var(--color-error);
+  --am:  #c8ccd4;   /* cold silver for leadup sets */
+  --bl:  #5a9ae0;
+}
+
+/* ──────────────────────────────────────────
+   ACCENT OVERRIDES (colour-only, no bg change)
+   ────────────────────────────────────────── */
+
+/* Green */
+[data-theme="green"] {
+  --accent-primary:   #1DB954;
+  --accent-secondary: #127336;
+  --gradient-primary: linear-gradient(180deg, #149B48 0%, #0B6229 100%);
+  --btn-main-color:   #041509;
+  --ac-glow:          rgba(29,185,84,.2);
+  --ac:  #1DB954;
+  --ad:  rgba(29,185,84,.07); --ab:  rgba(29,185,84,.18);
+  --ac04: rgba(29,185,84,.03); --ac05: rgba(29,185,84,.04);
+  --ac06: rgba(29,185,84,.05); --ac07: rgba(29,185,84,.05);
+  --ac08: rgba(29,185,84,.06); --ac10: rgba(29,185,84,.07);
+  --ac12: rgba(29,185,84,.08); --ac14: rgba(29,185,84,.09);
+  --ac15: rgba(29,185,84,.1);  --ac18: rgba(29,185,84,.12);
+  --ac20: rgba(29,185,84,.13); --ac25: rgba(29,185,84,.16);
+  --ac28: rgba(29,185,84,.18); --ac30: rgba(29,185,84,.2);
+  --ac40: rgba(29,185,84,.26); --ac45: rgba(29,185,84,.3);
+  --ac50: rgba(29,185,84,.33); --ac55: rgba(29,185,84,.37);
+  --ac60: rgba(29,185,84,.4);  --ac70: rgba(29,185,84,.47);
+  --orm-bg: rgba(29,185,84,.07); --orm-border: rgba(29,185,84,.4);
+  --orm-glow: rgba(29,185,84,.12); --orm-icon-bg: rgba(29,185,84,.12);
+  --orm-icon-bd: rgba(29,185,84,.3); --orm-color: #1DB954;
+  --orm-label: rgba(29,185,84,.7);
+}
+
+/* Premium White */
+[data-theme="premium"] {
+  --accent-primary:   #F2F2F2;
+  --accent-secondary: #EAEAEA;
+  --gradient-primary: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 100%);
+  --btn-main-color:   #0A0A0A;
+  --ac-glow:          rgba(242,242,242,.2);
+  --ac:  #F2F2F2;
+  --ad:  rgba(242,242,242,.07); --ab:  rgba(242,242,242,.18); --am: #D0D0D0;
+  --ac04: rgba(242,242,242,.03); --ac05: rgba(242,242,242,.04);
+  --ac06: rgba(242,242,242,.05); --ac07: rgba(242,242,242,.05);
+  --ac08: rgba(242,242,242,.06); --ac10: rgba(242,242,242,.07);
+  --ac12: rgba(242,242,242,.08); --ac14: rgba(242,242,242,.09);
+  --ac15: rgba(242,242,242,.1);  --ac18: rgba(242,242,242,.12);
+  --ac20: rgba(242,242,242,.13); --ac25: rgba(242,242,242,.16);
+  --ac28: rgba(242,242,242,.18); --ac30: rgba(242,242,242,.2);
+  --ac40: rgba(242,242,242,.26); --ac45: rgba(242,242,242,.3);
+  --ac50: rgba(242,242,242,.33); --ac55: rgba(242,242,242,.37);
+  --ac60: rgba(242,242,242,.4);  --ac70: rgba(242,242,242,.47);
+  --orm-bg: rgba(242,242,242,.05); --orm-border: rgba(242,242,242,.25);
+  --orm-glow: rgba(242,242,242,.08); --orm-icon-bg: rgba(242,242,242,.08);
+  --orm-icon-bd: rgba(242,242,242,.2); --orm-color: #F2F2F2;
+  --orm-label: rgba(242,242,242,.6);
+}
+
+/* Orange classic */
+[data-theme="orange"] {
+  --accent-primary:   #d4a843;
+  --accent-secondary: #a07830;
+  --bg-primary:       #111213;
+  --bg-card:          #18191b;
+  --text-primary:     #F0F1F4;
+  --text-secondary:   #A0A2A8;
+  --border-subtle:    #2a2b2e;
+  --border-light:     #333539;
+  --gradient-primary: linear-gradient(135deg, #d4a843 0%, #a07830 100%);
+  --btn-main-color:   #1a1410;
+  --ac-glow:          rgba(212,168,67,.26);
+  --color-error:      #c0392b;
+  --ac:  #d4a843; --s2: #1e1f22;
+  --ad:  rgba(212,168,67,.07); --ab: rgba(212,168,67,.18);
+  --am:  #c49a2a; --mt: #787A82; --tx: #D8D9DC;
+  --bg:  #111213; --sf: #18191b; --br: #2a2b2e; --br2: #333539;
+  --nav-bg: rgba(15,16,17,.98); --nav-border: #2a2b2e;
+  --ac04: rgba(212,168,67,.03); --ac05: rgba(212,168,67,.04);
+  --ac06: rgba(212,168,67,.05); --ac07: rgba(212,168,67,.05);
+  --ac08: rgba(212,168,67,.06); --ac10: rgba(212,168,67,.07);
+  --ac12: rgba(212,168,67,.08); --ac14: rgba(212,168,67,.09);
+  --ac15: rgba(212,168,67,.1);  --ac18: rgba(212,168,67,.12);
+  --ac20: rgba(212,168,67,.13); --ac25: rgba(212,168,67,.16);
+  --ac28: rgba(212,168,67,.18); --ac30: rgba(212,168,67,.2);
+  --ac40: rgba(212,168,67,.26); --ac45: rgba(212,168,67,.3);
+  --ac50: rgba(212,168,67,.33); --ac55: rgba(212,168,67,.37);
+  --ac60: rgba(212,168,67,.4);  --ac70: rgba(212,168,67,.47);
+  --orm-bg: rgba(180,40,40,.07); --orm-border: rgba(200,60,60,.4);
+  --orm-glow: rgba(200,50,50,.12); --orm-icon-bg: rgba(200,60,60,.12);
+  --orm-icon-bd: rgba(200,60,60,.3); --orm-color: #f07070;
+  --orm-label: rgba(220,80,80,.7);
+}
+
+/* ══════════════════════════════════════════
+   BACKGROUND THEMES
+   ══════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────
+   Grey — neutral, iOS-inspired
+   bg: cool neutral dark  |  secondary: clear mid-grey
+   ────────────────────────────────────────── */
+[data-bg="grey"] {
+  --bg-primary:    #1c1c1e;
+  --bg-card:       #2c2c2e;
+  --text-primary:  #f0f0f5;
+  --text-secondary:#8e8e96;
+  --border-subtle: #38383a;
+  --border-light:  #48484a;
+  --s2:   #242428;
+  --tx:   #ccccd8;
+  --tx2:  #f0f0f5;
+  --sb:   #8e8e96;
+  --br:   #38383a;
+  --br2:  #48484a;
+  --mt:   #5c5c6a;   /* passive secondary: neutral-grey with slight blue */
+  --sf:   #2c2c2e;
+  --bg:   #1c1c1e;
+  --nav-bg: rgba(26,26,28,.99);
+  --nav-border: #38383a;
+  --am:   #c0c0c8;
+}
+[data-bg="grey"] #app {
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 3px),
+    linear-gradient(160deg, #202023 0%, #1c1c1e 55%, #1a1b1f 100%);
+}
+
+/* ──────────────────────────────────────────
+   Light — warm editorial, off-white
+   bg: warm cream  |  secondary: warm brown-grey
+   ────────────────────────────────────────── */
+[data-bg="light"] {
+  --bg-primary:    #f5f2ed;   /* warm off-white, not sterile */
+  --bg-card:       #fdfcfa;   /* warm white cards */
+  --text-primary:  #1a1815;   /* warm near-black */
+  --text-secondary:#7a7268;   /* warm brown-grey */
+  --border-subtle: #ddd8d0;   /* warm beige border */
+  --border-light:  #cec8c0;
+  --s2:   #ede9e3;            /* warm secondary surface */
+  --tx:   #4a4540;            /* warm body text */
+  --tx2:  #1a1815;
+  --sb:   #7a7268;
+  --br:   #ddd8d0;
+  --br2:  #cec8c0;
+  --mt:   #a09688;            /* passive secondary: warm muted */
+  --sf:   #fdfcfa;
+  --bg:   #f5f2ed;
+  --nav-bg: rgba(253,250,245,.97);
+  --nav-border: #ddd8d0;
+  --am:   #888078;
+}
+
+[data-bg="light"] body { background: #f5f2ed; }
+
+[data-bg="light"] #app {
+  background: linear-gradient(160deg, #f9f6f2 0%, #f5f2ed 55%, #f2efe8 100%);
+}
+
+/* Light theme element overrides */
+[data-bg="light"] .stb-warmup {
+  background: var(--s2);
+  border-color: var(--br2);
+  color: var(--sb);
+}
+[data-bg="light"] .stb-leadup {
+  background: rgba(74,69,64,.07);
+  border-color: rgba(74,69,64,.18);
+  color: var(--tx);
+}
+[data-bg="light"] .pbar        { background: var(--br); }
+[data-bg="light"] textarea      { background: var(--sf); }
+[data-bg="light"] .card,
+[data-bg="light"] .card-sm      { border-top-color: var(--br); }
+[data-bg="light"] select option { background: var(--sf); color: var(--tx2); }
+[data-bg="light"] input[type="email"],
+[data-bg="light"] input[type="password"] {
+  background: var(--sf) !important;
+  color: var(--tx2) !important;
+}
